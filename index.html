@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>GCT Flow</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 100%;  /* The height is 100%, making this div a full page map */
+        width: 100%;   /* The width is 100% */
+        position: initial !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style=" background-color: #0062cc!important; ">
+    <div class="navbar-brand" href="#">Playground for Telecom Data(<bold style="
+    font-size: 25px;
+    color: deeppink;
+">GCT flows</bold>)-to-Urban Mobility(<bold style="
+    font-size: 25px;
+    color: coral;
+">Mobility flows</bold>)
+
+</div>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+       
+        <a class="btn btn-outline-success my-2 my-sm-0" href="https://github.com/cylin-gn/tel-to-mob" target="_blank">Github</a>
+      </form>
+    </div>
+    
+  </nav>
+</header>
+
+<main role="main">
+
+
+  <div class="container marketing" style="    margin-top: 10px;">
+    <div class="row featurette" style="
+    margin-top: 10px;
+">
+   <div class="col-md-12">
+
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="1000px" height="300px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500" >
+  <title>Placeholder</title>
+  <image href="paper_overview.png" x="0" y="0" height="100%" width="100%" ></image>
+</svg>
+      </div>
+
+      <div class="col-md-12">
+        <h1 class="">Overview</h1>
+        <h2 class="" style="
+    color: cornflowerblue;
+">What is the task from Telecom to Mobility?</h2> 
+<div class="lead">A new task that leverages undirected features (Geographical Cellular Traffic (GCT) flows) to predict directional features (Mobility Flows). <br> <br> This task advances a new graph modeling paradigm: using historical undirected features to predict directional features, which differs from the current prediction problems that focus on the same domain.
+
+</div><br>
+<a class="btn btn-outline-primary my-2 my-sm-0" href="https://github.com/cylin-gn/tel-to-mob/tree/main/data" target="_blank" style="
+    /* margin-top: 30px; */
+">Download Data</a>
+<br>
+      </div>
+      
+
+
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        
+        <h1 class="" style="
+    /* position: absolute; */
+    /* top: 649px; */
+">Dataset: TeltoMob</h1><h3 class="" style="color: deeppink !important;">GCT flows</h3><div class="lead">
+  <bold style="
+    color: blue;
+">GCT (Geographical Cellular Traffic)</bold>: Refers
+
+  cellular traffic data associated with its generated location. <br><bold style="
+    color: blue;
+">GCT flow</bold>: Refers to the accumulated GCT within a region over a specific time interval (typically 15 minutes). Over time, the series of GCT flows reflect the patterns of the respective region.
+
+<br><div style="
+    text-align: center;
+    font-style: italic;
+    margin-top: 15px;
+">GCT Flow Examples
+</div><svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="350px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+  <title>Placeholder</title>
+  <image href="temporal_example.png" x="0" y="0" height="100%" width="100%"></image>
+</svg></div>
+
+
+
+      </div>
+
+
+      <div class="col-md-6 order-md-2">
+        
+        <h3 class="" style="color: coral;margin-top: 55px;">Mobility Flow</h3><div class="lead"> <bold style="
+    color: blue;
+">GCT pairings</bold>:  Refers to the association of consecutive GCT entries for a single user when they are found in adjacent road segments within a 15-minute timeframe.
+        <br>
+        <bold style="
+    color: blue;
+">Mobility flow</bold>: The total count of GCT pairings for a road route, recorded at fixed time intervals (e.g., 15 minutes).</div>
+
+<svg style=" height: 35vh; " class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="350px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+  <title>Placeholder</title>
+  <image href="ex1.png" x="0" y="0" height="100%" width="100%" style="  "></image>
+</svg>
+
+<svg style=" height: 35vh; "class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="350px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+  <title>Placeholder</title>
+  <image href="ex2.png" x="0" y="0" height="100%" width="100%" style="  "> </image>
+</svg>
+
+
+
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <h2 style="margin: auto;"> Playground</h2>
+        <iframe src="map.html" style="border:none;width:100%;height: 650px;"></iframe>
+    </div>
+   
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>Copyright © 2023 cy07gn</p>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+
+
+
+    <!-- Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed in this example)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACNY0Ulsv854nOM-9xzyKVdHIUs1I-TcU&callback=initMap">
+    </script>
+</html>
